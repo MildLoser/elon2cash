@@ -40,9 +40,9 @@ def test_make_tweet_text(twitter):
         'name': 'Boeing',
         'sentiment': -0.1,
         'ticker': 'BA'}],
-        'https://twitter.com/realDonaldTrump/status/806134244384899072') == (
+        'https://twitter.com/elonmusk/status/806134244384899072') == (
         'Boeing \U0001f44e $BA\n'
-        'https://twitter.com/realDonaldTrump/status/806134244384899072')
+        'https://twitter.com/elonmusk/status/806134244384899072')
     assert twitter.make_tweet_text([{
         'name': 'Ford',
         'sentiment': 0.3,
@@ -51,10 +51,10 @@ def test_make_tweet_text(twitter):
         'root': 'Fiat Chrysler Automobiles',
         'sentiment': 0.3,
         'ticker': 'FCAU'}],
-        'https://twitter.com/realDonaldTrump/status/818461467766824961') == (
+        'https://twitter.com/elonmusk/status/818461467766824961') == (
         'Ford \U0001f44d $F\n'
         'Fiat \U0001f44d $FCAU\n'
-        'https://twitter.com/realDonaldTrump/status/818461467766824961')
+        'https://twitter.com/elonmusk/status/818461467766824961')
     assert twitter.make_tweet_text([{
         'name': 'Lockheed Martin',
         'sentiment': -0.1,
@@ -62,17 +62,17 @@ def test_make_tweet_text(twitter):
         'name': 'Boeing',
         'sentiment': 0.1,
         'ticker': 'BA'}],
-        'https://twitter.com/realDonaldTrump/status/812061677160202240') == (
+        'https://twitter.com/elonmusk/status/812061677160202240') == (
         'Lockheed Martin \U0001f44e $LMT\n'
         'Boeing \U0001f44d $BA\n'
-        'https://twitter.com/realDonaldTrump/status/812061677160202240')
+        'https://twitter.com/elonmusk/status/812061677160202240')
     assert twitter.make_tweet_text([{
         'name': 'General Motors',
         'sentiment': 0,
         'ticker': 'GM'}],
-        'https://twitter.com/realDonaldTrump/status/821697182235496450') == (
+        'https://twitter.com/elonmusk/status/821697182235496450') == (
         'General Motors ¯\\_(\u30c4)_/¯ $GM\n'
-        'https://twitter.com/realDonaldTrump/status/821697182235496450')
+        'https://twitter.com/elonmusk/status/821697182235496450')
     assert twitter.make_tweet_text([{
         'ticker': 'XOM',
         'name': 'ExxonMobil',
@@ -93,9 +93,9 @@ def test_make_tweet_text(twitter):
         'name': 'ExxonMobil',
         'sentiment': 0.5,
         'exchange': 'New York Stock Exchange'}],
-        'https://twitter.com/realDonaldTrump/status/838862131852369922') == (
+        'https://twitter.com/elonmusk/status/838862131852369922') == (
         'ExxonMobil \U0001f44d $XOM $BLK $PNC $STT\n'
-        'https://twitter.com/realDonaldTrump/status/838862131852369922')
+        'https://twitter.com/elonmusk/status/838862131852369922')
     assert twitter.make_tweet_text([{
         'ticker': 'GM',
         'name': 'General Motors',
@@ -110,15 +110,15 @@ def test_make_tweet_text(twitter):
         'name': 'Walmart',
         'sentiment': 0.4,
         'exchange': 'New York Stock Exchange'}],
-        'https://twitter.com/realDonaldTrump/status/821415698278875137') == (
+        'https://twitter.com/elonmusk/status/821415698278875137') == (
         'General Motors \U0001f44d $GM\n'
         'Walmart \U0001f44d $WMT $STT\n'
-        'https://twitter.com/realDonaldTrump/status/821415698278875137')
+        'https://twitter.com/elonmusk/status/821415698278875137')
     assert twitter.make_tweet_text([{
         'ticker': chr(i - 32),
         'name': chr(i),
         'sentiment': 0} for i in range(97, 123)],
-        'https://twitter.com/realDonaldTrump/status/0') == (
+        'https://twitter.com/elonmusk/status/0') == (
         'a ¯\\_(\u30c4)_/¯ $A\n'
         'b ¯\\_(\u30c4)_/¯ $B\n'
         'c ¯\\_(\u30c4)_/¯ $C\n'
@@ -126,7 +126,7 @@ def test_make_tweet_text(twitter):
         'e ¯\\_(\u30c4)_/¯ $E\n'
         'f ¯\\_(\u30c4)_/¯ $F\n'
         'g ¯\\\u2026\n'
-        'https://twitter.com/realDonaldTrump/status/0')
+        'https://twitter.com/elonmusk/status/0')
 
 
 def test_get_sentiment_emoji(twitter):
@@ -144,7 +144,7 @@ def test_get_sentiment_emoji(twitter):
 #         'ons! https://t.co/PLxUmXVl0h')
 #     assert tweet['id_str'] == '845334323045765121'
 #     assert tweet['user']['id_str'] == '25073877'
-#     assert tweet['user']['screen_name'] == 'realDonaldTrump'
+#     assert tweet['user']['screen_name'] == 'elonmusk'
 #     assert tweet['created_at'] == 'Fri Mar 24 17:59:42 +0000 2017'
 
 
@@ -160,7 +160,7 @@ def test_get_tweet_musk(twitter):
 # def test_get_tweet_link_trump(twitter):
 #     tweet = twitter.get_tweet('828574430800539648')
 #     assert twitter.get_tweet_link(tweet) == (
-#         'https://twitter.com/realDonaldTrump/status/828574430800539648')
+#         'https://twitter.com/elonmusk/status/828574430800539648')
 
 
 def test_get_tweet_link_musk(twitter):

@@ -1,6 +1,6 @@
 # Trump2Cash
 
-This bot watches [Donald Trump's tweets](https://twitter.com/realDonaldTrump)
+This bot watches [Donald Trump's tweets](https://twitter.com/elonmusk)
 and waits for him to mention any publicly traded companies. When he does, it
 uses sentiment analysis to determine whether his opinions are positive or
 negative toward those companies. The bot then automatically executes trades on

@@ -200,7 +200,7 @@ class Twitter:
                              user_id=TRUMP2CASH_USER_ID,
                              exclude_replies=True).items():
 
-            # Extract the quoted @realDonaldTrump tweet, if available.
+            # Extract the quoted @elonmusk tweet, if available.
             try:
                 quoted_tweet_id = status.quoted_status_id
             except AttributeError:
